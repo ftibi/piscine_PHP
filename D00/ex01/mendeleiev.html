@@ -5,7 +5,7 @@
      By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+
                                                   +#+#+#+#+#+   +#+
      Created: 2016/06/13 16:01:14 by tfolly            #+#    #+#
-     Updated: 2016/06/13 20:14:01 by tfolly           ###   ########.fr
+     Updated: 2016/06/13 20:28:16 by tfolly           ###   ########.fr
 -->
 <html>
 <head>
@@ -19,7 +19,7 @@
 				height: 60px;}
 		.nb		{text-align: left;
 				font-size: 10;
-				position: relative;
+				/*position: relative;*/
 				bottom: 0;}
 		.mass	{text-align: right;
 				font-size: 10;
@@ -27,9 +27,9 @@
 				top: 0;}
 		.name	{text-align: center;
 				font-size: 25;}
-		.metal	{background-color: blue;}
-		.metalloid {background-color: red;}
-		.non-metal {background-color: green;}
+		.metal	{background-color: lightblue;}
+		.metalloid {background-color: #F78181;}
+		.non-metal {background-color: lightgreen;}
 		.la-ac	{background-color: pink;}
 	</style>
 </head>
@@ -65,12 +65,12 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td class=metal>
 			<div class=mass>6.941</div>
 			<div class=name>Li</div>
 			<div class=nb>3</div>
 		</td>
-		<td>
+		<td class=metal>
 			<div class=mass>9.0122</div>
 			<div class=name>Be</div>
 			<div class=nb>4</div>
@@ -112,12 +112,12 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td class=metal>
 			<div class=mass>22.990</div>
 			<div class=name>Na</div>
 			<div class=nb>11</div>
 		</td>
-		<td>
+		<td class=metal>
 			<div class=mass>24.305</div>
 			<div class=name>Mg</div>
 			<div class=nb>12</div>
@@ -132,7 +132,7 @@
 		<td style="border: none"></td>
 		<td style="border: none"></td>
 		<td style="border: none"></td>
-		<td>
+		<td class=metal>
 			<div class=mass>26.982</div>
 			<div class=name>Al</div>
 			<div class=nb>13</div>
@@ -159,56 +159,56 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td class=metal>
 			<div class=mass>39.098</div>
 			<div class=name>K</div>
 			<div class=nb>19</div>
 		</td>
-		<td>
+		<td class=metal>
 			<div class=mass>40.078</div>
 			<div class=name>Ca</div>
 			<div class=nb>20</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>44.956</div>
 			<div class=name>Sc</div>
 			<div class=nb>21</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>47.867</div>
 			<div class=name>Ti</div>
 			<div class=nb>22</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>50.942</div>
 			<div class=name>V</div>
 			<div class=nb>23</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>51.996</div>
 			<div class=name>Cr</div>
 			<div class=nb>24</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>54.938</div>
 			<div class=name>Mn</div>
 			<div class=nb>25</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>55.845</div>
 			<div class=name>Fe</div>
 			<div class=nb>26</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>58.933</div>
 			<div class=name>Co</div>
 			<div class=nb>27</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>58.693</div>
 			<div class=name>Ni</div>
 			<div class=nb>28</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>63.546</div>
 			<div class=name>Cu</div>
 			<div class=nb>29</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>65.38</div>
 			<div class=name>Zn</div>
 			<div class=nb>30</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>69.723</div>
 			<div class=name>Ga</div>
 			<div class=nb>31</div>
@@ -235,60 +235,60 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td class=metal>
 			<div class=mass>85.468</div>
 			<div class=name>Rb</div>
 			<div class=nb>37</div>
 		</td>
-		<td>
+		<td class=metal>
 			<div class=mass>87.62</div>
 			<div class=name>Sr</div>
 			<div class=nb>38</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>88.906</div>
 			<div class=name>Y</div>
 			<div class=nb>39</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>91.224</div>
 			<div class=name>Zr</div>
 			<div class=nb>40</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>92.906</div>
 			<div class=name>Nb</div>
 			<div class=nb>41</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>95.96</div>
 			<div class=name>Mo</div>
 			<div class=nb>42</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>(98)</div>
 			<div class=name>Tc</div>
 			<div class=nb>43</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>101.07</div>
 			<div class=name>Ru</div>
 			<div class=nb>44</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>102.91</div>
 			<div class=name>Rh</div>
 			<div class=nb>45</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>106.42</div>
 			<div class=name>Pd</div>
 			<div class=nb>46</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>107.87</div>
 			<div class=name>Ag</div>
 			<div class=nb>47</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>112.41</div>
 			<div class=name>Cd</div>
 			<div class=nb>48</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>114.82</div>
 			<div class=name>In</div>
 			<div class=nb>49</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>118.71</div>
 			<div class=name>Sn</div>
 			<div class=nb>50</div>
@@ -311,64 +311,64 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td class=metal>
 			<div class=mass>132.91</div>
 			<div class=name>Cs</div>
 			<div class=nb>55</div>
 		</td>
-		<td>
+		<td class=metal>
 			<div class=mass>137.33</div>
 			<div class=name>Ba</div>
 			<div class=nb>56</div>
 		</td><td class=la-ac>
 			<div class=mass></div>
 			<div class=name style="font-size: 20">La-Lu</div>
-			<div class=nb style="vertical-align: 200%">57-71</div>
-		</td><td>
+			<!-- <div class=nb style="vertical-align: 200%">57-71</div> -->
+		</td><td class=metal>
 			<div class=mass>178.49</div>
 			<div class=name>Hf</div>
 			<div class=nb>72</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>180.95</div>
 			<div class=name>Ta</div>
 			<div class=nb>73</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>183.84</div>
 			<div class=name>W</div>
 			<div class=nb>74</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>186.21</div>
 			<div class=name>Re</div>
 			<div class=nb>75</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>190.23</div>
 			<div class=name>Os</div>
 			<div class=nb>76</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>192.22</div>
 			<div class=name>Ir</div>
 			<div class=nb>77</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>185.97</div>
 			<div class=name>Pt</div>
 			<div class=nb>78</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>196.97</div>
 			<div class=name>Au</div>
 			<div class=nb>79</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>200.59</div>
 			<div class=name>Hg</div>
 			<div class=nb>80</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>204.38</div>
 			<div class=name>Tl</div>
 			<div class=nb>81</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>207.2</div>
 			<div class=name>Pb</div>
 			<div class=nb>82</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>208.98</div>
 			<div class=name>Bi</div>
 			<div class=nb>83</div>
@@ -387,52 +387,52 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td class=metal>
 			<div class=mass>(223)</div>
 			<div class=name>Fr</div>
 			<div class=nb>87</div>
 		</td>
-		<td>
+		<td class=metal>
 			<div class=mass>(226)</div>
 			<div class=name>Ra</div>
 			<div class=nb>88</div>
 		</td><td class=la-ac>
 			<div class=mass></div>
 			<div class=name style="font-size: 20">Ac-Lr</div>
-			<div class=nb>89-103</div>
-		</td><td>
+			<!-- <div class=nb>89-103</div> -->
+		</td><td class=metal>
 			<div class=mass>(267)</div>
 			<div class=name>Rf</div>
 			<div class=nb>104</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>(268)</div>
 			<div class=name>Db</div>
 			<div class=nb>105</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>(271)</div>
 			<div class=name>Sg</div>
 			<div class=nb>106</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>(272)</div>
 			<div class=name>Bh</div>
 			<div class=nb>107</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>(277)</div>
 			<div class=name>Hs</div>
 			<div class=nb>108</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>(276)</div>
 			<div class=name>Mt</div>
 			<div class=nb>109</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>(281)</div>
 			<div class=name>Ds</div>
 			<div class=nb>110</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>(280)</div>
 			<div class=name>Rg</div>
 			<div class=nb>111</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>(285)</div>
 			<div class=name>Cn</div>
 			<div class=nb>112</div>
@@ -440,7 +440,7 @@
 			<div class=mass>(...)</div>
 			<div class=name>Uut</div>
 			<div class=nb>113</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>(287)</div>
 			<div class=name>Fl</div>
 			<div class=nb>114</div>
@@ -448,7 +448,7 @@
 			<div class=mass>(...)</div>
 			<div class=name>Uup</div>
 			<div class=nb>115</div>
-		</td><td>
+		</td><td class=metal>
 			<div class=mass>(291)</div>
 			<div class=name>Lv</div>
 			<div class=nb>116</div>
