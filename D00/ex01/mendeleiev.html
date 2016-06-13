@@ -5,7 +5,7 @@
      By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+
                                                   +#+#+#+#+#+   +#+
      Created: 2016/06/13 16:01:14 by tfolly            #+#    #+#
-     Updated: 2016/06/13 19:14:20 by tfolly           ###   ########.fr
+     Updated: 2016/06/13 20:03:12 by tfolly           ###   ########.fr
 -->
 <html>
 <head>
@@ -27,13 +27,16 @@
 				top: 0;}
 		.name	{text-align: center;
 				font-size: 25;}
+		.metal	{background-color: blue;}
+		.metalloid {background-color: red;}
+		.non-metal {background-color: green;}
 	</style>
 </head>
 <body>
 <table>
 	<caption><h2>Tableau périodique des éléments</h2><img src="https://pixabay.com/static/uploads/photo/2012/12/06/16/03/atom-68866_640.jpg" height="100px" width="100px" /></caption>
 	<tr>
-		<td>
+		<td class=non-metal>
 			<div class=mass>1</div>
 			<div class=name>H</div>
 			<div class=nb>1</div>
@@ -54,7 +57,7 @@
 		<td style="border: none"></td>
 		<td style="border: none"></td>
 		<td style="border: none"></td>
-		<td>
+		<td class=non-metal>
 			<div class=mass>4</div>
 			<div class=name>He</div>
 			<div class=nb>2</div>
@@ -85,23 +88,23 @@
 			<div class=mass>10.811</div>
 			<div class=name>B</div>
 			<div class=nb>5</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>12.011</div>
 			<div class=name>C</div>
 			<div class=nb>6</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>14.007</div>
 			<div class=name>N</div>
 			<div class=nb>7</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>15.999</div>
 			<div class=name>O</div>
 			<div class=nb>8</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>18.998</div>
 			<div class=name>F</div>
 			<div class=nb>9</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>20.180</div>
 			<div class=name>Ne</div>
 			<div class=nb>10</div>
@@ -136,19 +139,19 @@
 			<div class=mass>28.086</div>
 			<div class=name>Si</div>
 			<div class=nb>14</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>30.974</div>
 			<div class=name>P</div>
 			<div class=nb>15</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>32.065</div>
 			<div class=name>S</div>
 			<div class=nb>16</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>35.453</div>
 			<div class=name>Cl</div>
 			<div class=nb>17</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>39.948</div>
 			<div class=name>Ar</div>
 			<div class=nb>18</div>
@@ -216,15 +219,15 @@
 			<div class=mass>74.922</div>
 			<div class=name>As</div>
 			<div class=nb>33</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>78.96</div>
 			<div class=name>Se</div>
 			<div class=nb>34</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>79.904</div>
 			<div class=name>Br</div>
 			<div class=nb>35</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>83.798</div>
 			<div class=name>Kr</div>
 			<div class=nb>36</div>
@@ -296,11 +299,11 @@
 			<div class=mass>127.60</div>
 			<div class=name>Te</div>
 			<div class=nb>52</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>126.90</div>
 			<div class=name>I</div>
 			<div class=nb>53</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>131.29</div>
 			<div class=name>Xe</div>
 			<div class=nb>54</div>
@@ -318,8 +321,8 @@
 			<div class=nb>56</div>
 		</td><td>
 			<div class=mass></div>
-			<div class=name style="font-size: 20 ;vertical-align: 50%">La-Lu</div>
-			<div class=nb style="vertical-align: bottom">57-71</div>
+			<div class=name style="font-size: 20">La-Lu</div>
+			<div class=nb style="vertical-align: 200%">57-71</div>
 		</td><td>
 			<div class=mass>178.49</div>
 			<div class=name>Hf</div>
@@ -372,11 +375,11 @@
 			<div class=mass>(209)</div>
 			<div class=name>Po</div>
 			<div class=nb>84</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>(210)</div>
 			<div class=name>At</div>
 			<div class=nb>85</div>
-		</td><td>
+		</td><td class=non-metal>
 			<div class=mass>(222)</div>
 			<div class=name>Rn</div>
 			<div class=nb>86</div>
