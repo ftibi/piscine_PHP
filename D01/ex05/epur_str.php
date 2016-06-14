@@ -1,7 +1,6 @@
 #!/usr/bin/php
 <?php
 
-
 function ft_split($str)
 {
 	$tab = explode(" ", $str);
@@ -10,8 +9,8 @@ function ft_split($str)
 	return $tab;
 }
 
-$tab = ft_split($argv[1]);
-print_r($tab);
-
+$str = ft_split($argv[1]);
+$str = implode(" ", $str);
+echo "$str\n";
 
 ?>
