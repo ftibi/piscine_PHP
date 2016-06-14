@@ -9,8 +9,13 @@ function ft_split($str)
 	return $tab;
 }
 
-$str = ft_split($argv[1]);
-$str = implode(" ", $str);
-echo "$str\n";
+if ($argc == 2)
+{
+	$str = ft_split($argv[1]);
+	$str = implode(" ", $str);
+	echo "$str\n";
+}
+else
+	echo "\n";
 
 ?>
