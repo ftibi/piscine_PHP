@@ -10,8 +10,6 @@ function read_stdin()
         return $input;
 }
 
-
-
 while (1)
 {
 	echo "Entrez un nombre: ";
