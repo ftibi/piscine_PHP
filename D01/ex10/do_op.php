@@ -16,7 +16,7 @@ if (trim($argv[2]) == '-')
 if (trim($argv[2]) == '/')
 	 print($val1 / $val2."\n");
 if (trim($argv[2]) == '*')
-	 print($val1 + $val2."\n");
+	 print($val1 * $val2."\n");
 if (trim($argv[2]) == '%')
 	 print($val1 % $val2."\n");
 
