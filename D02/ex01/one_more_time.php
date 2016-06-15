@@ -16,6 +16,17 @@ function wrong_format($nb)
 	exit (0);
 }
 
+function ft_is_digit($str)
+{
+	$str = str_split($str);
+	foreach ($str as $elem)
+	{
+		if (ord($elem) < 48 || ord($elem) > 57)
+			return (0);
+	}
+	return (1);
+}
+
 function test_format($date, $time)
 {
 	if (count($date) != 5)
@@ -24,13 +35,13 @@ function test_format($date, $time)
 		wrong_format(2);
 	if (strlen($date[3]) != 4)
 		wrong_format(3);
-	if (!ctype_digit($date[3]))
+	if (!ft_is_digit($date[3]))
 		wrong_format(4);
 	if (preg_match_all(":", $date[4]))
 		wrong_format(5);
 	foreach ($time as $elem)
 	{
-		if (!ctype_digit($elem))
+		if (!ft_is_digit($elem))
 			wrong_format(6);
 		if (strlen($elem) != 2)
 			wrong_format(7);
