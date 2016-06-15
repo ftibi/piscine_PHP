@@ -27,7 +27,7 @@ while ($i < $argc)
 	$tab = array_merge($tab, $to_merge);
 	$i++;
 }
-sort($tab);
+sort($tab, SORT_STRING);
 ft_print_tab($tab);
 
 ?>

@@ -15,7 +15,5 @@ if ($argc == 2)
 	$str = implode(" ", $str);
 	echo "$str\n";
 }
-else
-	echo "\n";
 
 ?>
