@@ -1,6 +1,8 @@
 #!/usr/bin/php
 <?php
 
+
+//CTYPE 
 function ft_split($str)
 {
 	$tab = explode(" ", $str);
