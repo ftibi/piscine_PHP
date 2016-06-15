@@ -3,15 +3,12 @@
 
 function ft_is_sort($tab)
 {
-	$i = 0;
-	while ($i < count($tab) - 1)
+	$sorted_tab = $tab;
+	sort($tab, SORT_STRING);
+	if ($tab !== $sorted_tab)
 	{
-		if ($tab[$i] > $tab[$i + 1])
-		{
 			echo "Le tableau n'est pas trie\n";
-			return 0;
-		}
-		$i++;
+			return (0);
 	}
 	echo "Le tableau est trie\n";
 	return (1);
