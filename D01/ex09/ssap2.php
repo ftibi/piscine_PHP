@@ -19,6 +19,53 @@ function ft_print_tab($tab)
 	}
 }
 
+function ft_is_digit($str)
+{
+	if (ord($str) < 48 || ord($str) > 57)
+		return (0);
+	return (1);
+}
+
+function ft_is_alpha($elem)
+{
+	if ((ord($elem) >= 65 && ord($elem) <= 90) || (ord($elem) >= 97 && ord($elem) <= 122))
+		return (1);
+	return (0);
+}
+
+//renvoie 1 si str1 < str2 dans notre cas
+//ne pas oublier case insensitive (comparer avec strtolower)
+function ft_comp_ssap($str1, $str2)
+{
+	$str1 = str_split($str1);
+	$str2 = str_split($str2);
+	$i = 0;
+	while ($str1[$i])
+	{
+		if (!$str2[$i])
+			return (3);
+		if (ft_is_alpha($str1[$i]) && !ft_is_alpha($str2[$i]))
+			return (-1);
+		if (!ft_is_alpha($str1[$i]) && ft_is_alpha($str2[$i]))
+			return (1);
+		if (ft_is_digit($str1[$i]) && !ft_is_digit($str2[$i]))
+			return (-2);
+		if (!ft_is_digit($str1[$i]) && ft_is_digit($str2[$i]))
+			return (2);
+		if (ft_is_alpha($str1[$i]) && ft_is_alpha($str2[$i]))
+		{
+			if ((ord($str1[$i]) % 32 - ord($str2[$i]) % 32))
+				return (ord($str1[$i]) % 32 - ord($str2[$i]) % 32);
+		}
+		else if (ord($str1[$i]) - ord($str2[$i]))
+			return (ord($str1[$i]) - ord($str2[$i]));
+		$i++;
+	}
+	if ($str2[$i])
+		return (-3);
+	return (0);
+}
+
 $i = 1;
 $tab = [];
 while ($i < $argc)
@@ -27,26 +74,11 @@ while ($i < $argc)
 	$tab = array_merge($tab, $to_merge);
 	$i++;
 }
-$nb = array();
-$char = array();
-$str = array();
-$i = 0;
-while ($i < count($tab))
-{
-	if(is_numeric($tab[$i]))
-		array_push($nb, $tab[$i]);
-	else if(ctype_alpha($tab[$i]))
-		array_push($str, $tab[$i]);
-	else
-		array_push($char, $tab[$i]);
-	$i++;
-}
-natcasesort($str);
-$str = array_values($str);
-sort($nb, SORT_STRING);
-sort($char);
-ft_print_tab($str);
-ft_print_tab($nb);
-ft_print_tab($char);
+
+ // print(ft_comp_ssap("+","1")."\n");
+ // print(ft_comp_ssap("b", "B")."\n");
+// ft_print_tab($tab);
+usort($tab, ft_comp_ssap);
+ft_print_tab($tab);
 
 ?>
