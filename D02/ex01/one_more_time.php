@@ -68,7 +68,7 @@ function test_format($date, $time, $argv)
 date_default_timezone_set('Europe/Paris');
 //transformation
 $date = explode(' ', $argv[1]);
-// print_r($date);
+// echo_r($date);
 $time = explode(':', $date[4]);
 
 test_format($date, $time, $argv);

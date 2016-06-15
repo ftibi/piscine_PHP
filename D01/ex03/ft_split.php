@@ -11,7 +11,7 @@ function ft_split($str)
 }
 
 $tab = ft_split("salut    comment ca va  ");
-print_r($tab);
+echo_r($tab);
 
 
 ?>

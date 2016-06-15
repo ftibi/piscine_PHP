@@ -9,7 +9,7 @@ function ft_split($str)
 	return $tab;
 }
 
-function ft_print_tab($tab)
+function ft_echo_tab($tab)
 {
 	$i = 0;
 	while ($tab[$i])
@@ -28,6 +28,6 @@ while ($i < $argc)
 	$i++;
 }
 sort($tab, SORT_STRING);
-ft_print_tab($tab);
+ft_echo_tab($tab);
 
 ?>

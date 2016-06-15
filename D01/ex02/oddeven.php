@@ -17,13 +17,13 @@ while (1)
 	if(is_numeric($stdin))
 	{
 		if ($stdin % 2 == 0)
-			print("Le chiffre $stdin est Pair\n");
+			echo("Le chiffre $stdin est Pair\n");
 		else
-			print("Le chiffre $stdin est Impair\n");
+			echo("Le chiffre $stdin est Impair\n");
 	}
 	else
 	{
-		print("'$stdin' n'est pas un chiffre\n");
+		echo("'$stdin' n'est pas un chiffre\n");
 	}
 }
 
