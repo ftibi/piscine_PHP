@@ -1,8 +1,6 @@
 #!/usr/bin/php
 <?php
 
-//CTYPE
-
 function sum($val1, $val2)
 {
 	return ($val1 + $val2);
@@ -63,10 +61,15 @@ while ($i < count($str))
 			echo "Syntax Error\n";
 			exit (0);
 	}
-	if (!ctype_digit(substr($str, $i + 1)))
+	$sub = substr($str, $i + 1);
+	$sub = str_split($sub);
+	foreach ($sub as $elem)
 	{
-		echo "Syntax Error\n";
-		return (0);
+		if (ord($elem) < 48 || ord($elem) > 57)
+		{
+			echo "Syntax Error\n";
+			return (0);
+		}
 	}
 	$val2 = intval(substr($str, $i + 1));
 	if (is_numeric($val2))
