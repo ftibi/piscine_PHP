@@ -33,8 +33,6 @@ function ft_is_alpha($elem)
 	return (0);
 }
 
-//renvoie 1 si str1 < str2 dans notre cas
-//ne pas oublier case insensitive (comparer avec strtolower)
 function ft_comp_ssap($str1, $str2)
 {
 	$str1 = str_split($str1);
@@ -75,9 +73,6 @@ while ($i < $argc)
 	$i++;
 }
 
- // print(ft_comp_ssap("+","1")."\n");
- // print(ft_comp_ssap("b", "B")."\n");
-// ft_print_tab($tab);
 usort($tab, ft_comp_ssap);
 ft_print_tab($tab);
 
