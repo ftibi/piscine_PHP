@@ -10,7 +10,7 @@ function ft_split($str)
 	return $tab;
 }
 
-$tab = ft_split($argv[1]);
+$tab = ft_split("salut    comment ca va  ");
 print_r($tab);
 
 
