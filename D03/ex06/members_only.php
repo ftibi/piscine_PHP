@@ -6,7 +6,7 @@ if ($_SERVER['PHP_AUTH_USER'] === "zaz" && $_SERVER['PHP_AUTH_PW'] === "jaimeles
 	$img = base64_encode($img);
 	echo "<html><body>
 Bonjour Zaz<br />
-<img src='data:image/png;base64,$img >
+<img src='data:image/png;base64,$img' >
 </body></html>\n";
 }
 else
