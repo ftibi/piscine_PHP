@@ -1,14 +1,10 @@
 <?php
 
 session_start();
-
 if ($_GET['login'])
 	$_SESSION['login'] = $_GET['login'];
 if ($_GET['passwd'])
 	$_SESSION['passwd'] = $_GET['passwd'];
-
- echo $_SESSION['login']."\n";
- echo $_SESSION['passwd']."\n";
 
 ?>
 
