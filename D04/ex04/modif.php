@@ -1,5 +1,7 @@
 <?php
 
+header('Location : ./index.html');
+
 if ($_POST['login'] && $_POST['oldpw'] && $_POST['newpw'])
 {
 
@@ -31,5 +33,5 @@ if ($_POST['login'] && $_POST['oldpw'] && $_POST['newpw'])
 }
 else
 	echo ("ERROR\n");
-
+exit();
 ?>

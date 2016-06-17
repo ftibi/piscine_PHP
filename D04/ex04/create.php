@@ -19,19 +19,24 @@ if ($_POST['login'] && $_POST['passwd'])
 
 	if ($data_file[$_POST['login']])
 	{
-			echo ("ERROR\n");
-			exit();
+		header("Location : index.html");
+		echo ("ERROR\n");
 	}
 	else
 	{
+		header("Location : index.html");
 		echo ("OK\n");
 		$data_file[$_POST['login']] = array("login" => $_POST['login'], "passwd" => hash("whirlpool", $_POST['passwd']));
 		$data_file = serialize($data_file);
 	}
 	file_put_contents($finename, $data_file);
+	exit();
 
 }
 else
+{
+	header("Location : index.html");
 	echo ("ERROR\n");
-
+	exit();
+}
 ?>

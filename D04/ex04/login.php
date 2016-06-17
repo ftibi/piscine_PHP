@@ -4,10 +4,10 @@ include 'auth.php';
 
 session_start();
 
-if (auth($_GET["login"], $_GET["passwd"]))
+if (auth($_POST["login"], $_POST["passwd"]))
 {
 	echo ("OK\n");
-	$_SESSION["logged_on_user"] = $_GET['login'];
+	$_SESSION["logged_on_user"] = $_POST['login'];
 }
 else
 {
