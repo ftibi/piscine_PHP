@@ -16,7 +16,7 @@ if (isset($_POST['login']) && isset($_POST['passwd']))
 	if ($data_file[$_POST['login']])
 	{
 		header("Location : index.html");
-		echo ("ERROR0\n");
+		echo ("ERROR\n");
 	}
 	else
 	{
@@ -32,7 +32,7 @@ if (isset($_POST['login']) && isset($_POST['passwd']))
 else
 {
 	header("Location : index.html");
-	echo ("ERROR1\n");
+	echo ("ERROR\n");
 	exit();
 }
 ?>

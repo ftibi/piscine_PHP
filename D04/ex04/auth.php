@@ -9,7 +9,7 @@ function auth($login, $passwd)
 	else
 		$data_file = "";
 	$data_file = unserialize($data_file);
-	if ($data_file[$_GET['login']] && $data_file[$_GET['login']]['passwd'] === hash("whirlpool",$_GET['passwd']))
+	if ($data_file[$_POST['login']] && $data_file[$_POST['login']]['passwd'] === hash("whirlpool",$_POST['passwd']))
 		return (true);
 	else
 		return (false);
