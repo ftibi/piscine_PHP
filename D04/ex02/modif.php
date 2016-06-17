@@ -15,7 +15,7 @@ if ($_POST['login'] && $_POST['oldpw'] && $_POST['newpw'])
 	$data_file = unserialize($data_file);
 
 
-	if (!$data_file[$_POST['login']] || $data_file[$_POST['login']]['passwd'] !== $_POST['oldpw'])
+	if (!$data_file[$_POST['login']] || $data_file[$_POST['login']]['passwd'] !== hash("whirlpool",$_POST['oldpw']))
 	{
 			echo ("ERROR\n");
 			exit();
@@ -23,7 +23,7 @@ if ($_POST['login'] && $_POST['oldpw'] && $_POST['newpw'])
 	else
 	{
 		echo ("OK\n");
-		$data_file[$_POST['login']] = array("login" => $_POST['login'], "passwd" => hash("whirlpool", $_POST['passwd']));
+		$data_file[$_POST['login']] = array("login" => $_POST['login'], "passwd" => hash("whirlpool", $_POST['newpw']));
 		$data_file = serialize($data_file);
 	}
 	file_put_contents($finename, $data_file);
