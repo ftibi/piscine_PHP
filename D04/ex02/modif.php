@@ -3,10 +3,12 @@
 session_start();
 if ($_POST['login'])
 	$_SESSION['login'] = $_POST['login'];
-if ($_POST['passwd'])
-	$_SESSION['passwd'] = $_POST['passwd'];
+if ($_POST['oldpw'])
+	$_SESSION['oldpw'] = $_POST['oldpw'];
+if ($_POST['newpw'])
+	$_SESSION['newpw'] = $_POST['newpw'];
 
-if ($_POST['login'] && $_POST['passwd'])
+if ($_POST['login'] && $_POST['oldpw'] && $_POST['newpw'])
 {
 
 	if (!file_exists("../private"))
@@ -21,7 +23,7 @@ if ($_POST['login'] && $_POST['passwd'])
 	$data_file = unserialize($data_file);
 
 
-	if ($data_file[$_SESSION['login']])
+	if (!$data_file[$_SESSION['login']] || $data_file[$_SESSION['login']]['passwd'] !== $_SESSION['oldpw'])
 	{
 			echo ("ERROR\n");
 			exit();
