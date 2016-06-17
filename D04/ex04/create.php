@@ -15,12 +15,12 @@ if (isset($_POST['login']) && isset($_POST['passwd']))
 
 	if ($data_file[$_POST['login']])
 	{
-		header("Location : index.html");
+		header("Location: index.html");
 		echo ("ERROR\n");
 	}
 	else
 	{
-		header("Location : index.html");
+		header("Location: index.html");
 		echo ("OK\n");
 		$data_file[$_POST['login']] = array("login" => $_POST['login'], "passwd" => hash("whirlpool", $_POST['passwd']));
 	}
@@ -31,7 +31,7 @@ if (isset($_POST['login']) && isset($_POST['passwd']))
 }
 else
 {
-	header("Location : index.html");
+	header("Location: index.html");
 	echo ("ERROR\n");
 	exit();
 }

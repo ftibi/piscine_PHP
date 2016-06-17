@@ -1,6 +1,5 @@
 <?php
 
-header('Location : ./index.html');
 
 if ($_POST['login'] && $_POST['oldpw'] && $_POST['newpw'])
 {
@@ -24,6 +23,7 @@ if ($_POST['login'] && $_POST['oldpw'] && $_POST['newpw'])
 	}
 	else
 	{
+		header('Location:./index.html');
 		echo ("OK\n");
 		$data_file[$_POST['login']] = array("login" => $_POST['login'], "passwd" => hash("whirlpool", $_POST['newpw']));
 		$data_file = serialize($data_file);
