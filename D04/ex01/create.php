@@ -29,7 +29,7 @@ if ($_POST['login'] && $_POST['passwd'])
 	else
 	{
 		echo ("OK\n");
-		$data_file[$_SESSION['login']] = hash("whirlpool", $_SESSION['passwd']);
+		$data_file[$_SESSION['login']] = array("login" => $_SESSION['login'], "passwd" => hash("whirlpool", $_SESSION['passwd']));
 		$data_file = serialize($data_file);
 	}
 	file_put_contents($finename, $data_file);
