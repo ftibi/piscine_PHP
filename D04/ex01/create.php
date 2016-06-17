@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 if ($_POST['login'] && $_POST['passwd'])
 {
 
@@ -26,8 +24,8 @@ if ($_POST['login'] && $_POST['passwd'])
 	{
 		echo ("OK\n");
 		$data_file[$_POST['login']] = array("login" => $_POST['login'], "passwd" => hash("whirlpool", $_POST['passwd']));
-		$data_file = serialize($data_file);
 	}
+	$data_file = serialize($data_file);
 	file_put_contents($finename, $data_file);
 
 }
