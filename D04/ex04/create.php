@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['login']) && isset($_POST['passwd']))
+if ($_POST['login'] && $_POST['passwd'])
 {
 
 	if (!file_exists("../private"))
@@ -26,7 +26,7 @@ if (isset($_POST['login']) && isset($_POST['passwd']))
 }
 else
 {
-	header("Location: index.html");
+	// header("Location: index.html");
 	echo ("ERROR\n");
 }
 exit();
