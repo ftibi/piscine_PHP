@@ -1,20 +1,16 @@
 <?php
 
-class House
+abstract class House
 {
-	public function getHouseName() {
-		return;
-	}
-	public function getHouseMotto() {
-		return;
-	}
-	public function getHouseSeat() {
-		return;
-	}
+	abstract public function getHouseName();
+	abstract public function getHouseSeat();
+	abstract public function getHouseMotto();
+
 	public function introduce()
 	{
-		echo "House $this->getHouseName() of $this->getHouseSeat() : \"$this->getHouseMotto()\"\n";
+		echo "House ".$this->getHouseName()." of ".$this->getHouseSeat()." : \"".$this->getHouseMotto()."\"".PHP_EOL;
 	}
+
 }
 
 
