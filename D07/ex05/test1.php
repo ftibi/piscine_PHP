@@ -36,6 +36,11 @@ $nw->recruit($jon);
 $nw->recruit($aemon);
 $nw->recruit($sam);
 
+// print_r($nw->brother);
+
 $nw->fight();
+
+// $jon->fight();
+// $sam->fight();
 
 ?>
