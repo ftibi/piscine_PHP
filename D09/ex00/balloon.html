@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Balloon</title>
+	<style type="text/css">
+		#fenetre {
+			border-radius: 100%;
+			background-color: var(--win-color);
+			width: var(--win-width);
+			height: var(--win-height);
+		}
+
+	</style>
+</head>
+<body>
+	<div id=fenetre onclick="changeColor(1)" onmouseover="changeColor(0)">
+
+	</div>
+	<script>
+		var my_div = document.getElementById('fenetre');
+		//On initialise le ballon
+		my_div.style.setProperty('--win-color', 'red');
+		my_div.style.setProperty('--win-width', '200px');
+		my_div.style.setProperty('--win-height', '200px');
+		var changeColor = function (updown){
+			//changement de couleur
+			var color_obj = {'red':'green', 'green':'blue', 'blue':'red'};
+			if (!updown)
+				color_obj = {'green':'red', 'blue':'green', 'red':'blue'};
+			var	win_color = my_div.style.getPropertyValue('--win-color');
+			my_div.style.setProperty('--win-color', color_obj[win_color]);
+
+			//changement de taille
+			var	win_width = my_div.style.getPropertyValue('--win-width');
+			var	win_height = my_div.style.getPropertyValue('--win-height');
+			var win_nb = win_height.slice(0, -2);
+			win_nb = parseInt(win_nb);
+			if (updown)
+				win_nb += 10;
+			else
+				win_nb -= 5;
+			if (win_nb > 420 || win_nb < 200){win_nb = 200;}
+			win_nb = win_nb.toString();
+			win_nb += "px";
+			my_div.style.setProperty('--win-width', win_nb);
+			my_div.style.setProperty('--win-height', win_nb);
+			// console.log(win_nb);
+		}
+
+	</script>
+</body>
+</html>
