@@ -1,32 +1,35 @@
 readcookie();
+// document.cookie = "todo/salut/lol/haha;"
 
 function newTodo(){
-	var ft_list = document.getElementById('ft_list');
+	var ft_list = $('#ft_list');
 	var new_task = prompt("Enter new task : ");
 	if (/\S/.test(new_task)){
-		var new_elem = document.createElement('div');
-		new_elem.innerHTML = new_task;
-		new_elem.setAttribute("onclick", "delItem(this)");
-		ft_list.insertBefore(new_elem, ft_list.childNodes[0]);
+		var new_elem = $('<div></div>');
+		new_elem.text(new_task);
+		new_elem.attr("onclick", "delItem(this)");
+		new_elem.addClass('task');
+		ft_list.prepend(new_elem);
 		savecookie(ft_list);
 	}
 }
 
 function delItem(itemtodel){
-	var ft_list = document.getElementById('ft_list');
+	var ft_list = $('#ft_list');
 	var conf = confirm("Delete this task?");
 	if (conf){
-		itemtodel.parentNode.removeChild(itemtodel);
+		itemtodel.remove();
 		savecookie(ft_list);
 	}
 }
 
 function savecookie(ft_list){
 	var cookie = "todo";
-	var elem;
-	for (var i = 0; i < ft_list.childNodes['length']; i++){
-		elem = ft_list.childNodes[i].innerHTML;
-		cookie = cookie.concat("/",elem);
+	for (var key in $('.task'))
+	{
+		if (parseInt(key) == key){
+			cookie = cookie.concat("/",$('.task')[key].textContent);
+		}
 	}
 	document.cookie = cookie;
 }
@@ -39,13 +42,14 @@ function readcookie(){
 	if (elem){
 		elem = elem[1];
 		elem = elem.split('/');
-		var ft_list = document.getElementById('ft_list');
+		var ft_list = $('#ft_list');
 		for (task in elem)
 		{
-			var new_elem = document.createElement('div');
-			new_elem.innerHTML = elem[task];
-			new_elem.setAttribute("onclick", "delItem(this)");
-			ft_list.appendChild(new_elem);
+			var new_elem = $('<div></div>');
+			new_elem.html(elem[task]);
+			new_elem.attr("onclick", "delItem(this)");
+			new_elem.addClass('task');
+			ft_list.append(new_elem);
 		}
 	}
 }
