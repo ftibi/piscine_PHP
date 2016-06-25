@@ -1,5 +1,4 @@
 readcookie();
-// document.cookie = "todo/salut/lol/haha;"
 
 function newTodo(){
 	var ft_list = $('#ft_list');
