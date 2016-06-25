@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Balloon</title>
+	<style type="text/css">
+		#fenetre {
+			border-radius: 100%;
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<script src='https://code.jquery.com/jquery-3.0.0.js'></script>
+</head>
+<body>
+	<div id=fenetre onclick="changeColor(1)" onmouseover="changeColor(0)">
+
+	</div>
+	<script>
+		//On initialise le ballon
+		function changeColor (updown){
+			//changement de couleur
+			var color_obj = {'red':'green', 'green':'blue', 'blue':'red'};
+			if (!updown)
+				color_obj = {'green':'red', 'blue':'green', 'red':'blue'};
+			var	win_color = $('#fenetre').css('background-color');
+			var color_corr = {'rgb(255, 0, 0)':'red', 'rgb(0, 128, 0)':'green', 'rgb(0, 0, 255)':'blue'};
+			win_color = color_corr[win_color];
+			$('#fenetre').css('background-color', color_obj[win_color]);
+
+			//changement de taille
+			var	win_width = $('#fenetre').css('width');
+			var	win_height = $('#fenetre').css('height');
+			var win_nb = win_height.slice(0, -2);
+			win_nb = parseInt(win_nb);
+			if (updown)
+				win_nb += 10;
+			else
+				win_nb -= 5;
+			if (win_nb > 420 || win_nb < 200){win_nb = 200;}
+			win_nb = win_nb.toString();
+			win_nb += "px";
+			$('#fenetre').css('width', win_nb);
+			$('#fenetre').css('height', win_nb);
+		}
+
+	</script>
+</body>
+</html>

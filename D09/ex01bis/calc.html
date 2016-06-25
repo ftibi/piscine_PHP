@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Calc</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<input type=text id='val1' />
+	<select name=ope id='ope'>
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>
+	<input type=text id='val2' />
+	<input type=submit value='Try me!' onclick='calculate()' />
+
+	<script>
+		setInterval(function(){ alert("’Please, use me..."); }, 30000);
+		function calculate (){
+			var val1 = document.getElementById('val1').value;
+			var val2 = document.getElementById('val2').value;
+			var ope = document.getElementById('ope').value;
+			if (val1 != parseInt(val1) || val2 != parseInt(val2)){
+				alert('Error :(');
+			}
+			else if (val1 < 0 || val2 < 0){
+				alert('Error :(');
+			}
+			else if ((ope == '/' || ope == '%') && val2 == 0 ){
+				alert("It’s over 9000!");
+				console.log("It’s over 9000!");
+			}
+			else{
+				val1 = val1.toString();
+				val2 = val2.toString();
+				var result = val1.concat(ope, val2);
+				result = eval(result);
+				console.log(result);
+				alert(result);
+			}
+
+		}
+	</script>
+</body>
+</html>
