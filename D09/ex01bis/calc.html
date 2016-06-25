@@ -2,6 +2,7 @@
 <head>
 	<title>Calc</title>
 	<meta charset="utf-8" />
+	<script src='https://code.jquery.com/jquery-3.0.0.js'></script>
 </head>
 <body>
 	<input type=text id='val1' />
@@ -18,9 +19,9 @@
 	<script>
 		setInterval(function(){ alert("’Please, use me..."); }, 30000);
 		function calculate (){
-			var val1 = document.getElementById('val1').value;
-			var val2 = document.getElementById('val2').value;
-			var ope = document.getElementById('ope').value;
+			var val1 = $('#val1').val();
+			var val2 = $('#val2').val();
+			var ope = $('#ope').val();
 			if (val1 != parseInt(val1) || val2 != parseInt(val2)){
 				alert('Error :(');
 			}
